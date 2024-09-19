@@ -1,0 +1,318 @@
+---
+title: "Introduction"
+subtitle: "Session 01"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: true
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2024
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+---
+
+# Introduction
+
+## About me
+
+-   Postdoctoral researcher at the project [DIGIPOL](https://www.unilu.ch/en/faculties/faculty-of-humanities-and-social-sciences/institutes-departements-and-research-centres/department-of-political-science/research/digitalization-and-political-conflict-parties-voters-and-electoral-alignment-digipol/#section=c122045)
+
+-   PhD in Political and Social Sciences from the [EUI](https://www.eui.eu/en/home)
+
+-   Interested in **political behaviour**, **comparative politics**, **democratic attitudes and preferences**, **quantitative methods**
+
+-   Originally from the [city with the most UNESCO heritage sites in the world](https://www.architecturaldigest.com/story/cordoba-spain-has-most-unesco-world-heritage-sites)
+
+-   You can find more information about me in [my personal website](https://acanalejo.github.io/)
+
+## What about you?
+
+-   Name
+
+-   Background
+
+- *Why did you take the course?*
+
+
+# What is this course about?
+
+## An era of data and computation
+
+![](data.png){fig-align="center"}
+
+<center>[Source here](https://explodingtopics.com/blog/data-generated-per-day)</center>
+
+## An era of data and computation
+
+![](computation.png){fig-align="center"}
+
+<center>[Source here](https://www.researchgate.net/figure/The-exponential-progress-of-computing-power-from-1900-to-2013-with-projections-into_fig1_335422453)</center>
+
+## Is it enough with collecting data and having the power to analyze it?
+
+. . .
+
+<br>
+
+**No! Science is all about** [**design**]{style="color:red;"}**!**
+
+. . .
+
+- The goal is to make **inferences** about the world on the basis of empirical information
+
+- To make the right inferences, **methods and rules** are crucial
+
+- This course is about these rules and methods, and how to **apply** them, with a focus on **quantitative research**
+
+## In what topics are you interested?
+
+![](topics.png){fig-align="center"}
+
+## Learning outcomes
+
+1. ...understand the logic of quantitative social science.
+
+2.  ...understand and critically assess quantitative research articles.
+
+3. ...identify an appropriate and feasible research design for a given research problem.
+
+4. ...communicate complex concepts effectively to a broad audience.
+
+5. ...perform simple descriptive and inferential statistical analyses.
+
+# The course organization
+
+## Teaching policy
+
+This is a **seminar**, not a lecture!
+
+Therefore, active participation is the most important tool:
+
+- No slides
+
+- Comments and doubts about the readings to be brought **in advance**
+
+- **Readings questions** every week
+
+- At least one **presentation** by student
+
+## Integration and interaction policy
+
+- No discrimination
+
+- Inclusive language
+
+- No bullying
+
+- **Everyone** should participate in equal terms
+
+## Artificial intelligence (AI) policy
+
+- AI tools, like ChatGPT, are allowed
+
+- They should augment, not replace, human work
+
+- Mandatory declaration policy
+
+## Evaluation I
+
+1. Attend all the sessions 
+
+2. Study the mandatory readings before each session 
+
+    - Focus on the basic readings
+
+3. Participate actively
+
+4. Answer the reading questions of each session 
+
+    - Specific folder in OLAT
+    
+    - To be uploaded the day before the class
+
+## Evaluation II
+   
+5. Presentation of the supplementary readings
+
+    - Organization at the end of this class
+    
+    - It should have: an introduction, researh design review, and research design proposal (more in the syllabus)
+
+6. Complete three take-home exercises
+
+    - Second half of the course (from October 31st)
+    
+    - Empirical applications (perform statistical analyses with real data using R)
+    
+## 
+
+```{r echo=FALSE, fig.width=6, fig.height=3, fig.align = "center"}
+# Load necessary library
+library(ggplot2)
+
+# Data for grading policy
+grades <- data.frame(
+  Category = c("Reading Questions", "Class Participation", "Take-home Exercises", "Presentation"),
+  Percentage = c(10, 20, 30, 40)
+)
+
+# Reorder the levels of Category based on Percentage from higher to lower
+grades$Category <- factor(grades$Category, levels = grades$Category[order(-grades$Percentage)])
+
+# Create a bar chart
+ggplot(grades, aes(x = reorder(Category, -Percentage), y = Percentage, fill = Category)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = paste0(Percentage, "%")), vjust = -0.5) +  # Add percentage labels
+  theme_minimal() +
+  labs(title = "Grading Policy Breakdown", x = "Category", y = "Percentage") +  # Remove x-axis label
+  scale_fill_brewer(palette = "Set2") +
+  ylim(0,50) +
+  theme(legend.position = "right",  # Add legend for categories
+        legend.title = element_blank(),  # Remove legend title
+        axis.text.x = element_blank(),  # Remove x-axis text
+        plot.title = element_text(hjust = 0.5))  # Center title
+```
+
+## Masterseminar paper
+
+- Between 7000 and 9000 words
+
+- Topic to be agreed with the lecturer
+
+- Paper outline of 1-2 by **December 1st 2024**
+
+    -	Introduction of the topic
+
+    -	Research question
+
+    - Academic and societal relevance
+
+    -	Theory and hypotheses
+
+    -	Approach and structure of the paper
+
+## Office and tutor hours
+
+No **office hours**; send an email to the lecturer ([alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)) to schedule a meeting one week in advance.
+
+**Tutor** for quick doubts and questions. Also, "tutorial classes" to help completing the take-home exercises on **Tuesdays from 16:00 to 17:30** starting on **November 5th** *(Hörsaal HS 2)*.
+
+- Name: **Sara Ndiaye**
+
+- E-mail address: **[sara.ndiaye@stud.unilu.ch](sara.ndiaye@stud.unilu.ch)**
+
+## Resources
+
+- **AJ**: Angrist, J. D. (2014). Mastering' metrics: The path from cause to effect. Princeton University Press.
+
+- **BCH**: Blair, G., Coppock, A., & Humphreys, M. (2023). [Research design in the social sciences: declaration, diagnosis, and redesign.](https://book.declaredesign.org/) Princeton University Press.
+
+- **BF**: Bueno de Mesquita, E. and Fowler A. (2021). Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis. Princeton University Press.
+
+- **GG**: Gerber, A. S., & Green, D. P. (2012). Field experiments: Design, analysis, and interpretation. (No Title).
+
+- **KKV**: King, G., Keohane, R.O., and S. Verba (1994). Designing Social Inquiry. Princeton: Princeton University Press.
+
+- **KW**: Kellstedt, P. M., and Whitten, G.D. (2013). The Fundamentals of Political Science Research. Third Edition. Cambridge: Cambridge University Press.
+
+Additionally...
+
+- [How to read a scientific article](https://macartan.github.io/teaching/how-to-read)
+
+- [How to critique a scientific article](https://macartan.github.io/teaching/how-to-critique)
+
+Finally, **supplementary readings** in OLAT.
+
+
+## Schedule I
+
+- Session 1. Introduction (19.09.24 / 14:15–16:00)
+
+- Session 2. The logic of scientific research (19.09.24 / 16:15–18:00)
+
+- Session 3. Theory and research design (03.10.24 / 14:15–16:00)
+
+- Session 4. Data and measurement (03.10.24 / 16:15–18:00)
+
+## Schedule II
+
+- Session 5. Descriptive inference (17.10.24 / 14:15–16:00)
+
+- Session 6. Causal inference (17.10.24 / 14:15–16:00)
+
+- Session 7. Predictive inference (31.10.24 / 16:15–18:00)
+
+- Session 8. Experimental studies (31.10.24 / 16:15–18:00)
+
+    - Publication take-home exercise I
+
+## Schedule III
+
+- Session 9. Large-N observational studies (14.11.24 / 14:15–16:00)
+
+- Session 10. Small-N observational studies (14.11.24 / 16:15–18:00)
+
+    - Deadline take-home exercise I
+    
+    - Publication take-home exercise II
+
+## Schedule IV
+
+- Session 11. Statistical testing (28.11.24 / 14:15–16:00)
+
+- Session 12. Introduction to regression I (28.11.24 / 16:15–18:00)
+
+    - Deadline take-home exercise II
+    
+    - Publication take-home exercise III
+
+- Session 13. Introduction to regression II (12.12.24 / 14:15–16:00) 
+
+- Session 14. Conclusion  (12.12.24 / 16:15–18:00)
+
+    - Deadline take-home exercise III
+
+
+# Conclusion
+
+------------------------------------------------------------------------
+
+![](questions.png){fig-align="center"}
+
+## Let's organize the presentations! :slightly_smiling_face:
+
+<br>
+
+<br>
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>
