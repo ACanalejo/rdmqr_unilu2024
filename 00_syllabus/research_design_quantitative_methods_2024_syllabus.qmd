@@ -141,7 +141,7 @@ The lecturer will upload a series of questions before each session about the con
 
 The **submission rules** are:
 
-- Students must upload their responses to the *reading_questions_responses* folder within the specific session folder (e.g., *02_session02*) in OLAT. 
+- Students must upload their responses to the *Students responses/Readings questions* folder within the specific session folder (e.g., *02_session*) in OLAT. 
 
 - The deadline for submitting the responses is the day before the corresponding session, that is, the **previous Wednesday at noon (12:00)**. 
 
@@ -151,11 +151,13 @@ The **submission rules** are:
 
 Presentations will be conducted individually or in groups of two and will last a maximum of 20 minutes. They will focus on the supplementary reading of the day, which includes a research design related to the topic. Rather than merely summarizing the chosen supplementary reading, the presenter(s) should critically evaluate its research design: Is it fully adequate, or does it have problematic aspects? After identifying the study's main flaws or limitations, the presenter(s) should propose a feasible research design to address these issues and improve or extend the inferential strategy. The schedule of the presentations will be determined during the introductory session. For further guidance, please refer to the "How to Make a Good Presentation" section of this syllabus.
 
-The presentation slides must be uploaded to the specific session folder (e.g., *03_session03*) in OLAT at least one day before the session, that is, the **previous Wednesday, at noon (12:00)**. The  slides can be in PowerPoint or PDF, but the name of the file must always follow the structure *presentation_slides_YOURSURNAME(S)* (e.g., *presentation_slides_CANALEJO*).
+The presentation slides must be uploaded to the *Students responses/Presentation slides* folder in OLAT at least one day before the session, that is, the **previous Wednesday, at noon (12:00)**. The  slides can be in PowerPoint or PDF, but the name of the file must always follow the structure *presentation_slides_sessionXX_YOURSURNAME(S)* (e.g., *presentation_slides_session02_CANALEJO*).
 
 ### 6. Complete three take-home exercises
 
 The exercises will take place in the second half of the course. They will build gradually upon each other and involve finding a dataset, developing a research question and hypotheses that can be tested with the data, and conducting basic statistical analyses using R. These exercises may be adapted based on the class needs. For students with prior knowledge of statistics and programming, additional non-mandatory exercises will be assigned.
+
+The responses to the exercises must be uploaded to the *Students responses/Take-home exercises* folder within the specific take-home exercises subfolder (e.g. *Take-home exercise I*). The name of the file must always follow the structure *take-home_exercise_X_YOURSURNAME(S)* (e.g., *take-home_exercise_i_CANALEJO*).
 
 ### Grading policy {.unnumbered}
 
