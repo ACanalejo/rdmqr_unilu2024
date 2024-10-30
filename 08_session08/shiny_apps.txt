@@ -1,0 +1,11 @@
+# Law of large numbers
+
+https://psu-eberly.shinyapps.io/Law_of_Large_Numbers/
+
+# Central limit theorem
+
+https://psu-eberly.shinyapps.io/Central_Limit_Theorem/
+
+# Power analysis
+
+https://shiny.math.uzh.ch/git/reinhard.furrer/SampleSizeR/
