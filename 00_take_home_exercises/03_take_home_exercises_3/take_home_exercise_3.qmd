@@ -1,0 +1,111 @@
+---
+title: "Test a (causal) hypothesis with observational data (THE III)"
+subtitle: "Research Design and Methods in Quantitative Research - Fall 2024"
+author: "Álvaro Canalejo-Molero"
+date:  "`r format(as.Date('2024-11-15'), '%d %b %Y')`"
+output: 
+  pdf_document:
+    keep_tex: false
+format:
+  pdf:
+    toc: false
+    toc-depth: 2
+execute:
+  echo: true       # Show all code
+  warning: false   # Suppress warnings
+---
+
+# Instructions
+
+Please read and follow the guidelines below carefully. Then, complete the exercises and report the results in a Quarto document. Compile the Quarto document in PDF and submit both the compiled PDF and `.qmd` files within the deadline. 
+
+Further instructions about the submission are [below](#submission).
+
+## Preparation step 1: Install R and RStudio
+
+To complete this exercise, you will need **R** and **RStudio** again. If you have already downloaded and installed R and RStudio, you can skip this part. Otherwise, please, download and install them from:
+
+- [R](https://cran.r-project.org/)
+
+- [RStudio](https://posit.co/download/rstudio-desktop/)
+
+A tutorial on how to start using R and R Studio is [here](https://hbctraining.github.io/Intro-to-R-flipped/lessons/01_introR-R-and-RStudio.html). ***Please contact the tutor and collaborate with your classmates in case of doubts or if you need any help.***
+
+## Preparation step 2: Prepare a Quarto Document
+
+Open RStudio, create a new Quarto document (`.qmd`), and set the output format to PDF. Make sure your Quarto installation is up-to-date:
+
+```{r}
+
+# Install Quarto if needed
+## Run this line in a separate script or the Quarto document will not compile
+# install.packages("quarto")
+
+```
+
+You can find help on how to set up a Quarto document [here](https://quarto.org/docs/get-started/hello/rstudio.html).
+
+## Preparation step 3: Download the CSES Integrated Module Dataset (IMD)
+
+The Comparative Study of Electoral Systems (CSES) is a standardized post-electoral cross-national survey that covers most democratic countries worldwide. It has been running since 1996 until now. The CSES Integrated Module Dataset (IMD) include selected variables from CSES Modules 1 through 5 into a single, harmonized longitudinal dataset. Variables included in the IMD must appear in at least three CSES Modules, up to and including Module 5. The dataset encompasses all polities that participated in these modules, featuring over 395,000 individual-level observations from 230 elections across 59 polities. Notable features of the CSES IMD include harmonized numerical codes for parties and coalitions within polities across modules, a pre-coded variable for incumbent vote choice, political information indexes, comprehensive macro-level data spanning over 25 years, and detailed within-dataset labels for all parties and coalitions.
+
+For this exercise, you will need to [register](https://cses.org/registration/) in the [CSES webpage]() and download the [CSES IMD](https://cses.org/data-download/cses-integrated-module-dataset-imd/). For easy integration with R, I recommend downloading the following file:
+
+- [cses_imd_r.zip](https://cses.org/wp-content/uploads/2024/02/cses_imd_r.zip)
+
+You will also need the [codebook](https://cses.org/wp-content/uploads/2024/02/cses_imd_codebook_part2_variables.txt).
+
+# Exercises
+
+## Exercise 1: Draw a DAG of the causal hypothesis
+
+You will use the CSES IMD data to test one of the most prominent theories in political science: the economic voting theory. This theory states that citizens decide their vote based on the state of the economy, so that they are more likely to support the incumbent (i.e., the outgoing governing party or candidate) if the economy works well and less likely is the economic situation is bad (for a review, see Lewis-Beck and Stegmaier, 2018). Focusing on citizens' perceptions rather than objective economic indicators, the following (causal) hypothesis follows:
+
+> **Hypothesis**: Negative (positive) economic evaluations reduce (increase) the probability of voting for the incumbent.
+
+The CSES data contains one variable that we can use as our independent ("treatment") variable, as it is operationalized as follows:
+
+- `IMD3013_1`:  Would you say that over the past twelve months, the state of the economy in [COUNTRY] has gotten better, stayed about the same, or gotten worse?
+
+It also contains a variable that we can use to measure voting for the incumbent (i.e., our dependent variable):
+
+- `IMD3002_OUTGOV`: Whether or not the respondent cast a ballot for the outgoing incumbent.
+
+Since we want to approximate a causal test, we will need to control for some variables in order to rule out endogeneity concerns. However, we do not want to do this blindly but based on theoretical reasoning. As you will see in the codebook, there are many variables that we can use (and more that we can construct) to try to isolate the causal relationship between economic evaluations and voting for the incumbent, but we do not want to use them all. To guide our model specification, **please draw a DAG of the theoretical relationship at hand**. This will guide our next choices, so it is important that it is done carefully. 
+
+You can draw a DAG in R using the packages `dagitty` and `ggdag` (see installation and loading below). Alternatively, you can draw it with any other program or by hand and [upload it to the .qmd document as an image](https://quarto.org/docs/authoring/figures.html). Please comment your decisions.
+
+*PS: Remember to simplify and do not include every variable you think it could be involved in the relationship, but only the most important. Also, group variables under broader concepts to avoid overfitting the DAG (e.g., 'socio-economic conditions' instead of 'employment status' and 'income').*
+
+```{r}
+# Install packages
+#install.packages(c("dagitty", "ggdag"))
+
+# Load necessary libraries
+library(tidyverse)
+library(dagitty)
+library(ggdag)
+```
+
+## Exercise 2: Prepare your data
+
+Based on your DAG, declare what variables you will use for the analysis. Please inspect and transform them when necessary (e.g., recode missing values, inverse scales, etc.). Report your code and comment your decisions.
+
+## Exercise 3: Test your hypothesis with an ordinary-least squares (OLS) multiple regression model
+
+Run an OLS regression model to test your hypothesis. Use the function `lm()` for that, or you can use more complicated functions if preferred. Then comment on your choices and your results. Based on them, does the evidence support your hypothesis?
+
+*Optional: you can plot the predicted probabilities of voting for the incumbent based on economic evaluations. This may be helpful for interpreting your results.*
+
+## Exercise 4 (additional): Run an additional analysis of your choice
+
+*This exercise is not mandatory, but it serves only to opt for the maximum grade (6).*
+
+Is there any other statistical test you could run to further support or disprove the hypothesis? Please think on the observable implications of the theory that could be tested with the CSES IMD data and provide an additional test. It can be either another regression specification or a different statistical analysis. Finally, comment on your decisions and results, and discuss them together with the results of the previous exercise. You can be as creative as you want here; it is the final exercise, so ***enjoy yourself***!
+
+# Bibliography
+
+Lewis-Beck, M. S., & Stegmaier, M. (2018). Economic voting. The Oxford handbook of public choice, 1, 247-265.
+
+
+

@@ -368,10 +368,10 @@ Additional readings:
 
 Basic readings:
 
-- KW: pp. 92-98. Chapter 4. Research Design, Section 4.3. Observational Studies (in two
+- KW: pp. 92-99. Chapter 4. Research Design, Section 4.3. Observational Studies (in two
 flavors)
 
-- KW: pp. 47-81. Chapter 2. Regression
+- AJ: pp. 47-81. Chapter 2. Regression
 
 Supplementary readings:
 
@@ -408,7 +408,7 @@ Additional readings:
 
 Basic readings:
 
-- KW: pp. 143-160. Chapter 7. Probability and Statistical Inference & Chapter 8. Bivariate Hypothesis Testing
+- KW: pp. 143-184. Chapter 7. Probability and Statistical Inference & Chapter 8. Bivariate Hypothesis Testing
 
 - BF: pp. 94-111. Chapter 6. Samples, Uncertainty, and Statistical Inference
 
@@ -437,7 +437,7 @@ Supplementary readings:
 
 Basic readings:
 
-- KW: pp. 215-271. Chapter 10. Multiple Regression: the Basics Models & Chapter 11. Multiple Regression Model Specification
+- KW: pp. 215-271. Chapter 10. Multiple Regression: the Basics & Chapter 11. Multiple Regression Model Specification
 
 
 Supplementary readings:
@@ -452,3 +452,7 @@ Supplementary readings:
 Basic readings:
 
 - Huntington‐Klein, N., Arenas, A., Beam, E., Bertoni, M., Bloem, J. R., Burli, P., ... & Stopnitzky, Y. (2021). The influence of hidden researcher decisions in applied microeconomics. Economic Inquiry, 59(3), 944-960.
+
+Additional readings:
+
+- Cinelli, C., Forney, A., & Pearl, J. (2024). A crash course in good and bad controls. Sociological Methods & Research, 53(3), 1071-1104.

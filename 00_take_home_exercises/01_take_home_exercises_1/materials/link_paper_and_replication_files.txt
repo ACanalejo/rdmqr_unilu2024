@@ -1,0 +1,7 @@
+# Link paper
+
+https://www.cambridge.org/core/journals/american-political-science-review/article/instrumentally-inclusive-the-political-psychology-of-homonationalism/1D9425F6FA20F34B0918018275A507A8
+
+# Link replication files
+
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/70UDEG

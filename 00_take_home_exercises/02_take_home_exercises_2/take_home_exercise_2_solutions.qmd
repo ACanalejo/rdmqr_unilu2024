@@ -1,0 +1,173 @@
+---
+title: "Replicating an Observational Study (THE II)"
+subtitle: "Research Design and Methods in Quantitative Research - Fall 2024"
+author: "Álvaro Canalejo-Molero"
+date:  "`r format(as.Date('2024-11-15'), '%d %b %Y')`"
+output: 
+  pdf_document:
+    keep_tex: false
+format:
+  pdf:
+    toc: false
+    toc-depth: 2
+execute:
+  echo: true       # Show all code
+  warning: false   # Suppress warnings
+---
+
+# Instructions
+
+Please read and follow the guidelines below carefully. Then, complete the exercises and report the results in a Quarto document. Compile the Quarto document in PDF and submit both the compiled PDF and `.qmd` files within the deadline. 
+
+Further instructions about the submission are [below](#submission).
+
+## Preparation step 1: Install R and RStudio
+
+To complete this exercise, you will need **R** and **RStudio** again. If you have already downloaded and installed R and RStudio, you can skipp this part. Otherwise, please, download and install them from:
+
+- [R](https://cran.r-project.org/)
+
+- [RStudio](https://posit.co/download/rstudio-desktop/)
+
+A tutorial on how to start using R and R Studio is [here](https://hbctraining.github.io/Intro-to-R-flipped/lessons/01_introR-R-and-RStudio.html). ***Please contact the tutor and collaborate with your classmates in case of doubts or if you need any help.***
+
+## Preparation step 2: Prepare a Quarto Document
+
+Open RStudio, create a new Quarto document (`.qmd`), and set the output format to PDF. Make sure your Quarto installation is up-to-date:
+
+```{r}
+
+# Install Quarto if needed
+## Run this line in a separate script or the Quarto document will not compile
+# install.packages("quarto")
+
+```
+
+You can find help on how to set up a Quarto document [here](https://quarto.org/docs/get-started/hello/rstudio.html).
+
+## Preparation step 3: Read the Assigned Paper and Download the Replication Files
+
+You will need to read the paper [*Wealth of Tongues: Why Peripheral Regions Vote for the Radical Right in Germany*](https://www.cambridge.org/core/journals/american-political-science-review/article/wealth-of-tongues-why-peripheral-regions-vote-for-the-radical-right-in-germany/62F03CD9CE943FBFD077F8CE79AFE999), which was assigned as a supplementary reading for ***session 09***.
+
+When you have read the paper, look in their [replication files](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MP1AKL) for the necessary files to replicate the main findings. In particular, locate and download:
+
+- Data file: `data_main.rds`
+- R Script: `tab_1_A4_A6_A7_A11.R`
+
+The replication files provide no codebook for the data (as you see, this is often the case). Therefore, you will need to use the R script to navigate the dataset and locate the relevant variables.
+
+# Exercise
+
+## Exercise 1: Summary of the Paper and Main Findings
+
+Provide a brief summary of the paper you are replicating. Describe the main findings, especially those related to the effect of dialectal distance on voting for AfD at the county-level.
+
+## Exercise 2: Data Preparation and Exploration
+
+Use the data file `data_main.rds` to begin the replication process. The main independent variable is dialectal distance to Hannover (`hannover_dist`). The dependent variables is county-level AfD vote share (`afd_party_17`). Please, provide a visualization of their distributions. 
+
+Then, generate a scatter plot of the relationship between dialectal distance and AfD vote share.
+
+Please comment your findings.
+
+```{r}
+
+# Load necessary packages
+library(tidyverse) # tidyverse environment
+library(ggplot2) # nice plots
+
+# Load the data
+data <- read_rds('materials/data_main.rds')
+
+
+# Visualize the distribution of AfD vote share
+ggplot(data, aes(x = afd_party_17)) +
+  geom_histogram(binwidth = 1, fill = "salmon", color = "black") +
+  labs(title = "Distribution of AfD Vote Share",
+       x = "AfD Vote Share",
+       y = "Frequency") +
+  theme_minimal()
+
+# Visualize the distribution of dialectal distance
+ggplot(data, aes(x = hannover_dist)) +
+  geom_histogram(binwidth = 1, fill = "salmon", color = "black") +
+  labs(title = "Distribution of Dialectal Distance",
+       x = "Dialectal Distance from Hannover",
+       y = "Frequency") +
+  theme_minimal()
+
+# Scatter plot of main relationship
+ggplot(data, aes(x = hannover_dist, y = afd_party_17)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "blue", se = TRUE) +
+  labs(title = "Relationship Between Dialectal Distance and AfD Vote Share",
+       x = "Dialectal Distance from Hannover",
+       y = "AfD Vote Share") +
+  theme_minimal()
+
+
+```
+
+## Exercise 3: Replicate Main Specification
+
+Now, use the same code as the authors in `tab_1_A4_A6_A7_A11.R` to replicate `m0`. This is their baseline model without state fixed effects (`state`), in which they just cluster the standard errors by county (`ags_2017`). Comment whether the replication was successful.
+
+Then, replicate the models adding state fixed effects without any additional covariate and comment the results. How are they different from your previous specification? And from the authors' reported results? Please explain why you think the results differ.
+
+PS: Please remember to always scale the main independent variable. You can use the function `scale()`, as the authors do in their code. For fixed-effects models, follow the authors and use the function `felm` from the package `lfe`.
+
+```{r}
+
+# Load necessary packages
+library(lfe) # to run fixed effects models
+
+# Replication authors' main specification
+m0 <- felm(afd_party_17 ~ scale(hannover_dist) | 0 |0 | ags_2017, 
+           data = data)
+summary(m0)
+
+# Replication with fixed-effects
+m0_fe <- felm(afd_party_17 ~ scale(hannover_dist) | state |0 | ags_2017, 
+           data = data)
+summary(m0_fe)
+
+```
+
+## Exercise 4 (additional): Additional Replication
+
+*This exercise is not mandatory, but it serves only to opt for the maximum grade (6).*
+
+Now add **two** covariates to your baseline specification (i.e., without state-fixed effects). You can select any covariates from the authors' model `m01`. Justify your selection of covariates and then explain how the results differ from your previous specification. 
+
+Based on the results, do you think you selected useful covariates to control for?
+
+Finally, add state fixed-effects to your two-control variables specification. Compare your results across specifications, including those reported by the authors. What conclusions do you draw about the role of control variables to isolate causal effects?  
+ 
+
+```{r}
+
+# Replication baseline specification (without FEs) with two covariates
+m0_controls <- felm(afd_party_17 ~ scale(hannover_dist) + unemp_rate_tot + 
+             dist_to_state_capital | 0 |0 | ags_2017, 
+           data = data) # control variables can be different
+summary(m0_controls)
+
+# Replication baseline specification with FEs and the same two covariates
+m0_fe_controls <- felm(afd_party_17 ~ scale(hannover_dist) + unemp_rate_tot + 
+             dist_to_state_capital | state |0 | ags_2017, 
+           data = data) # control variables can be different
+summary(m0_fe_controls)
+
+```
+
+# Submission guidelines {#submission}
+
+Please submit both the PDF file and the `.qmd` file. Both files should report all the code used for analysis and annotations explaining each step.
+
+The name of the files must follow the structure *take-home_exercise_ii_YOURSURNAME(S).pdf* and *take-home_exercise_ii_YOURSURNAME(S).qmd*, respectively. They should be upload to the folder *Students responses/Take-home exercises/Take-home exercise II* in OLAT.
+
+Deadline: **28.11.24**
+
+# References
+
+Ziblatt, D., Hilbig, H., & Bischof, D. (2024). Wealth of tongues: Why peripheral regions vote for the radical right in germany. American Political Science Review, 118(3), 1480-1496.
