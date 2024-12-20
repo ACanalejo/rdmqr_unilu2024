@@ -71,25 +71,25 @@ To help enforcing this policy, students are required to declare the use of AI an
 
 ## Evaluation
 
-### Mandatory requirements (4 credits) {.unnumbered}
+### Mandatory requirements (4 credits) 
 
 To receive the credits, students are expected to fulfill the following criteria:
 
-#### 1. Attend all the sessions {.unnumbered}
+#### 1. Attend all the sessions 
 
 Attendance is mandatory. Students can miss a maximum of two sessions. Missing more sessions without a justified certificate of absence implies failing the course.
 
-#### 2. Study the mandatory readings before each session {.unnumbered}
+#### 2. Study the mandatory readings before each session 
 
 *Studying = reading + critical thinking*. 
 
 Students can find the texts in the materials folder in OLAT.
 
-#### 3. Participate actively {.unnumbered}
+#### 3. Participate actively 
 
 Active engagement involves intervening during the discussion with questions, comments and ideas, reflecting on the content of the readings. Students are always encouraged to raise original arguments and debates.
 
-#### 4. Answer the reading questions of each session {.unnumbered}
+#### 4. Answer the reading questions of each session 
 
 The lecturer will upload a series of questions before each session about the content of the basic reading(s). Students are expected to answer to these questions briefly (one paragraph per question is enough) before each class. Completing these questions is mandatory to pass the course, however, the answers to the questions will not be graded. The idea is to encourage critical thinking when preparing the readings and prepare material to discuss during class.
 
@@ -101,19 +101,19 @@ The **submission rules** are:
 
 - The file must be in Word. The title must always follow the structure *reading_questions_sessionXX_YOURSURNAME* (e.g., *reading_questions_session03_CANALEJO*).
 
-#### 5. Present the supplementary reading of (at least) one of the sessions {.unnumbered}
+#### 5. Present the supplementary reading of (at least) one of the sessions 
 
 Presentations will be conducted individually or in groups of two and will last a maximum of 20 minutes. They will focus on the supplementary reading of the day, which includes a research design related to the topic. Rather than merely summarizing the chosen supplementary reading, the presenter(s) should critically evaluate its research design: Is it fully adequate, or does it have problematic aspects? After identifying the study's main flaws or limitations, the presenter(s) should propose a feasible research design to address these issues and improve or extend the inferential strategy. The schedule of the presentations will be determined during the introductory session. For further guidance, please refer to the "How to Make a Good Presentation" section of this syllabus.
 
 The presentation slides must be uploaded to the *Students responses/Presentation slides* folder in OLAT at least one day before the session, that is, the **previous Wednesday, at noon (12:00)**. The  slides can be in PowerPoint or PDF, but the name of the file must always follow the structure *presentation_slides_sessionXX_YOURSURNAME(S)* (e.g., *presentation_slides_session02_CANALEJO*).
 
-#### 6. Complete three take-home exercises {.unnumbered}
+#### 6. Complete three take-home exercises 
 
 The exercises will take place in the second half of the course. They will build gradually upon each other and involve finding a dataset, developing a research question and hypotheses that can be tested with the data, and conducting basic statistical analyses using R. These exercises may be adapted based on the class needs. For students with prior knowledge of statistics and programming, additional non-mandatory exercises will be assigned.
 
 The responses to the exercises must be uploaded to the *Students responses/Take-home exercises* folder within the specific take-home exercises subfolder (e.g. *Take-home exercise I*). The name of the file must always follow the structure *take-home_exercise_X_YOURSURNAME(S)* (e.g., *take-home_exercise_i_CANALEJO*).
 
-#### Grading policy {.unnumbered}
+#### Grading policy 
 
 - 10% of the grade is determined by submitting the answers to the reading questions.
 
@@ -126,7 +126,7 @@ The responses to the exercises must be uploaded to the *Students responses/Take-
 The grade will not only take differences between students into account but also within students' differences over time (i.e., their personal progress).
 
 
-### Masterseminar paper (6 credits) {.unnumbered}
+### Masterseminar paper (6 credits) 
 
 Students can choose to write a master seminar paper to obtain six extra credits. The seminar paper must have between 7000 and 9000 words. The topic should be agreed upon between the instructor and the student. To this end, students are asked to write a paper outline of 1-2 pages consisting of the following elements:
 
@@ -175,13 +175,13 @@ The contact details of the tutor are:
 
 ## Course schedule
 
-#### Session 1. Introduction (19.09.24 / 14:15–16:00) {.unnumbered}
+#### Session 1. Introduction (19.09.24 / 14:15–16:00) 
 
 Basic readings:
 
 - Schwartz, M. A. (2008). The importance of stupidity in scientific research. Journal of Cell Science, 121(11), 1771-1771.
 
-#### Session 2. The logic of scientific research (19.09.24 / 16:15–18:00) {.unnumbered}
+#### Session 2. The logic of scientific research (19.09.24 / 16:15–18:00) 
 
 Basic readings:
 
@@ -196,7 +196,7 @@ Supplementary readings:
 - Canalejo-Molero, Á., & Le Corre Juratic, M. (2024). Blinded by Out-group Hatred. Why does Radical Party Entry Reduce its Voters’ Satisfaction with Democracy?. https://doi.org/10.31219/osf.io/7bfka
 
 
-#### Session 3. Theory and research design  (03.10.24 / 14:15–16:00) {.unnumbered}
+#### Session 3. Theory and research design  (03.10.24 / 14:15–16:00) 
 
 *"All models are wrong, but some are useful"* (George E. P. Box)
 
@@ -212,7 +212,7 @@ Supplementary readings:
 
 - Dipoppa, G. (2021). How criminal organizations expand to strong states: Migrant exploitation and political brokerage in Northern Italy.
 
-#### Session 4. Data and measurement (03.10.24 / 16:15–18:00) {.unnumbered}
+#### Session 4. Data and measurement (03.10.24 / 16:15–18:00) 
 
 Basic readings:
 
@@ -226,7 +226,7 @@ Supplementary readings:
 
 - Knutsen, C. H., Marquardt, K. L., Seim, B., Coppedge, M., Edgell, A. B., Medzihorsky, J., ... & Lindberg, S. I. (2024). Conceptual and measurement issues in assessing democratic backsliding. PS: Political Science & Politics, 57(2), 162-177.
 
-#### Session 5. Descriptive inference (17.10.24 / 14:15–16:00) {.unnumbered}
+#### Session 5. Descriptive inference (17.10.24 / 14:15–16:00) 
 
 Basic readings:
 
@@ -243,7 +243,7 @@ Supplementary readings:
 - Garzia, D., Ferreira da Silva, F., & Maye, S. (2023). Affective polarization in comparative and longitudinal perspective. Public Opinion Quarterly, 87(1), 219-231.
 
 
-#### Session 6. Causal inference (17.10.24 / 14:15–16:00) {.unnumbered}
+#### Session 6. Causal inference (17.10.24 / 14:15–16:00) 
 
 Basic readings:
 
@@ -255,7 +255,7 @@ Supplementary readings:
 
 - Hosseinmardi, H., Ghasemian, A., Rivera-Lanas, M., Horta Ribeiro, M., West, R., & Watts, D. J. (2024). Causally estimating the effect of YouTube’s recommender system using counterfactual bots. Proceedings of the National Academy of Sciences, 121(8), e2313377121.
 
-#### Session 7. Predictive inference (31.10.24 / 16:15–18:00) {.unnumbered}
+#### Session 7. Predictive inference (31.10.24 / 16:15–18:00) 
 
 *Publication of* ***take-home exercise I*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***14.11.24*** *.*
 
@@ -269,7 +269,7 @@ Supplementary readings:
 
 - López-Iturriaga, F. J., & Sanz, I. P. (2018). Predicting public corruption with neural networks: An analysis of spanish provinces. Social indicators research, 140(3), 975-998.
 
-#### Session 8. Experimental studies (31.10.24 / 16:15–18:00) {.unnumbered}
+#### Session 8. Experimental studies (31.10.24 / 16:15–18:00) 
 
 Basic readings:
 
@@ -289,7 +289,7 @@ Additional readings:
 
 - Richardson, D. C., Devlin, J., Hogan, J. S., & Thompson, C. (2023). Small penises and fast cars: Evidence for a psychological link.
 
-#### Session 9. Large-N observational studies (14.11.24 / 14:15–16:00) {.unnumbered}
+#### Session 9. Large-N observational studies (14.11.24 / 14:15–16:00) 
 
 *Publication of* ***take-home exercise II*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***28.11.24*** *.*
 
@@ -311,7 +311,7 @@ Supplementary readings:
 - Ziblatt, D., Hilbig, H., & Bischof, D. (2024). Wealth of tongues: Why peripheral regions vote for the radical right in germany. American Political Science Review, 118(3), 1480-1496.
 
 
-#### Session 10. Small-N observational studies (14.11.24 / 16:15–18:00) {.unnumbered}
+#### Session 10. Small-N observational studies (14.11.24 / 16:15–18:00) 
 
 Basic readings:
 
@@ -329,7 +329,7 @@ Additional readings:
 
 - Hopkin, J. (2010). The comparative method. Theory and methods in political science, 3, 285-307.
 
-#### Session 11. Statistical testing (28.11.24 / 14:15–16:00) {.unnumbered}
+#### Session 11. Statistical testing (28.11.24 / 14:15–16:00) 
 
 *Publication of* ***take-home exercise III*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***12.12.24*** *.*
 
@@ -346,7 +346,7 @@ Supplementary readings:
 - Dasgupta, A., & Ramirez, E. (2020). Explaining Rural Conservatism: Political Consequences of Technological Change in the Great Plains. American Political Science Review, 1-23.
 
 
-#### Session 12. Introduction to regression I (28.11.24 / 16:15–18:00) {.unnumbered}
+#### Session 12. Introduction to regression I (28.11.24 / 16:15–18:00) 
 
 Basic readings:
 
@@ -359,7 +359,7 @@ Supplementary readings:
 - Polavieja, J. G. (2015). Capturing culture: A new method to estimate exogenous cultural effects using migrant populations. American Sociological Review, 80(1), 166-191.
 
 
-#### Session 13. Introduction to regression II (12.12.24 / 14:15–16:00) {.unnumbered}
+#### Session 13. Introduction to regression II (12.12.24 / 14:15–16:00) 
 
 
 Basic readings:
@@ -374,7 +374,7 @@ Supplementary readings:
 - Pulejo, M., & Querubín, P. (2023). Plata y plomo: How higher wages expose politicians to criminal violence (No. w31586). National Bureau of Economic Research.
 
 
-#### Session 14. Conclusion  (12.12.24 / 16:15–18:00) {.unnumbered}
+#### Session 14. Conclusion  (12.12.24 / 16:15–18:00) 
 
 Basic readings:
 
